@@ -1,0 +1,210 @@
+// Your customize CSS
+/* THEME */
+
+.sermon-latest .sermon-block {
+	background-color: $light;
+}
+
+.sermons-other .sermon-block {
+	// border: $light solid 2px;
+
+	/* Play button */
+	.plyr__control {
+		border: $light solid 2px;
+	}
+
+	.plyr--audio {
+		&.player-expand {
+
+			// Player colored block
+			.plyr__controls {
+				background-color: $light;
+			}
+		}
+	}
+}
+
+.sermon-block {
+	// flex-wrap: no-wrap;
+	flex-wrap: wrap;
+
+	/* .plyr {
+		margin-bottom: 20px;
+		display: none;
+	} */
+
+	/* .author {
+		// font-size: ;
+	} */
+
+	.sermon-body {
+		flex:1;
+	}
+
+	.description {
+		font-size: 90%;
+	}
+
+	.plyr--audio {
+		min-width: 100%;
+		margin-bottom: 20px;
+		border-radius: $border-radius-lg;
+
+		&:not(.player-expand) {
+			margin-right: 20px;
+			min-width: 0;
+			width:auto;
+
+			// Player colored block
+			.plyr__controls {
+				padding: 0;
+				overflow: hidden;
+			}
+
+			// Play Button;
+			.plyr__control {
+				padding: 18px;
+				border-radius: $border-radius-lg;
+			}
+
+			.plyr__controls__item:not(.plyr__control) {
+				display: none;
+			}
+		}
+
+		.plyr__control {
+			border-radius: $border-radius;
+		}
+
+		/* Play button */
+		.plyr__control.plyr__tab-focus,
+		.plyr__control:hover,
+		.plyr__control[aria-expanded="true"] {
+			background: $warning;
+			border-color: $warning;
+			color: #fff;
+		}
+	}
+}
+
+.play-button {
+	min-width: 58px;
+
+	svg	{
+		max-width: 14px;
+		margin-right: -2px;
+		margin-top: -2px;
+	}
+}
+
+/* .plyr--audio .plyr__controls {
+	// background: transparent;
+} */
+
+/* .btn-outline-primary {
+    color: #96913F;
+    border-color: #96913F;
+} */
+
+/* .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #E2B337;
+    border-color: #E2B337;
+} */
+.text-success {
+	color: #8B883D!important;
+}
+
+/* .text-danger {
+	color: #BD3A34!important;
+}
+ */
+// .btn-outline-danger {
+//     color: #BD3A34;
+//     border-color: #BD3A34;
+// }
+
+// .btn-outline-danger:hover {
+//     background-color: #BD3A34;
+//     border-color: #BD3A34;
+// }
+
+
+// .text-dark {
+// 	color: #1C334C!important;
+// }
+
+/* .rounded {
+    border-radius: 1rem!important;
+} */
+
+.font-weight-extra-bold {
+	font-weight: 800;
+}
+
+.mt-n6 {
+	margin-top: -4rem!important;
+}
+
+.letter-spacing-1 {
+	letter-spacing: 1px;
+}
+
+.letter-spacing-2 {
+	letter-spacing: 2px;
+}
+
+
+
+.divider svg {
+	width: 100%;
+}
+
+/* HEADER */
+
+.navbar-brand img {
+	max-height: 40px;
+}
+
+/* INTO */
+
+.page-intro {
+	font-family: 'Open Sans', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.page-intro .h1 {
+	line-height: 1;
+}
+
+.home-into {
+	width: 100%;
+	z-index: -1;
+}
+
+@media (min-width: 992px) {
+	.home-into {
+		position: absolute;
+		width: 70vw;
+		margin-top: -17vw!important;
+	}
+
+	.home-into-secondary {
+		margin-top: 33vw;
+	}
+
+}
+.time-block {
+	max-width: 140px;
+}
+
+.site-footer {
+	margin-top: 60px;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu {
+	min-height: calc( 100vh - 6rem - 60px);
+	// 6rem - are vertical paddings
+	// 60px is nav panel height
+}

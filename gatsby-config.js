@@ -32,14 +32,14 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'gatsby-starter-prismic',
+        repositoryName: 'openbible',
         accessToken: `${process.env.API_KEY}`,
         // Get the correct URLs in blog posts
         linkResolver: () => post => `/${post.uid}`,
         // PrismJS highlighting for labels and slices
         htmlSerializer: () => prismicHtmlSerializer,
         // Remove this config option if you only have one language in your Prismic repository
-        lang: 'en-gb',
+        // lang: 'en-gb',
       },
     },
     'gatsby-plugin-lodash',
@@ -70,6 +70,13 @@ module.exports = {
         display: 'standalone',
         icon: website.favicon,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        includePaths: [`${__dirname}/node_modules`, `${__dirname}/src/`],
+        precision: 8
+      }
     },
     // Must be placed at the end
     'gatsby-plugin-offline',
